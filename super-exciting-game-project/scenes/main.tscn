@@ -198,3 +198,13 @@ tile_set = SubResource("TileSet_tbgi4")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_jyhfs")]
 position = Vector2(11, -2)
+
+[node name="DebugPowerupLabel" type="Label" parent="."]
+anchors_preset = -1
+anchor_right = 0.035
+anchor_bottom = 0.018000001
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 215.68005
+offset_bottom = 33.0
+text = "Active Powerup: "

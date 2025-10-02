@@ -13,6 +13,9 @@ const slow_fall = "pw_slow_fall"
 var active_power = ""
 var remaining_jumps = 1
 
+@onready
+var debug_powerup_label = get_parent().get_node("DebugPowerupLabel")
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -55,6 +58,7 @@ func get_active_power() -> String:
 
 func set_active_power(power: String) -> void:
 	active_power = power
+	debug_powerup_label.text = "Active Powerup: " + power
 	
 func cycle_power() -> void:
 	match get_active_power():
