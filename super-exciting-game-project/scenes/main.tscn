@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://b18s6antjqees"]
+[gd_scene load_steps=8 format=4 uid="uid://b18s6antjqees"]
 
 [ext_resource type="Texture2D" uid="uid://kttl8w68t1xy" path="res://assets/Pink.png" id="1_sugp2"]
 [ext_resource type="Texture2D" uid="uid://nrdm3gehrkij" path="res://assets/Terrain (16x16).png" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://dh6canwj8471b" path="res://scenes/main_character.tscn" id="3_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://cxjbojokt3em2" path="res://scenes/collectable.tscn" id="4_jyhfs"]
+[ext_resource type="Script" uid="uid://dlx02r8ytnjcd" path="res://scenes/game_manager.gd" id="5_tbgi4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jyhfs"]
 texture = ExtResource("2_sugp2")
@@ -183,11 +185,10 @@ sources/0 = SubResource("TileSetAtlasSource_jyhfs")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = 54.0
+offset_top = 31.0
+offset_right = 1211.0
+offset_bottom = 627.0
 texture = ExtResource("1_sugp2")
 stretch_mode = 1
 
@@ -197,7 +198,12 @@ tile_map_data = PackedByteArray("AAABAAwAAAAHAAgAAAACAAwAAAAHAAgAAAADAAwAAAAHAAg
 tile_set = SubResource("TileSet_tbgi4")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_jyhfs")]
-position = Vector2(11, -2)
+position = Vector2(59, 28)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(40, 198)
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0
 
 [node name="DebugPowerupLabel" type="Label" parent="."]
 anchors_preset = -1
@@ -208,3 +214,22 @@ offset_top = 10.0
 offset_right = 215.68005
 offset_bottom = 33.0
 text = "Active Powerup: "
+
+[node name="Collectable" parent="." instance=ExtResource("4_jyhfs")]
+position = Vector2(135, 237)
+
+[node name="Collectable2" parent="." instance=ExtResource("4_jyhfs")]
+position = Vector2(444, 430)
+
+[node name="Collectable3" parent="." instance=ExtResource("4_jyhfs")]
+position = Vector2(558, 188)
+
+[node name="Collectable4" parent="." instance=ExtResource("4_jyhfs")]
+position = Vector2(340, 186)
+
+[node name="Collectable5" parent="." instance=ExtResource("4_jyhfs")]
+position = Vector2(70, 237)
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("5_tbgi4")
