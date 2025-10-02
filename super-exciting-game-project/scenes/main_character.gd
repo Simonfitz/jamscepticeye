@@ -8,7 +8,7 @@ const JUMP_VELOCITY = -900.0
 # Powerups
 # TODO: Move power ups to their own class/scene
 const double_jump: String = "pw_double_jump"
-const tripple_jump: String = "pw_tripple_jump"
+const triple_jump: String = "pw_triple_jump"
 const slow_fall: String = "pw_slow_fall"
 const low_gravity: String = "pw_low_gravity"
 const speed_increase: String = "pw_speed_increase"
@@ -43,7 +43,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		if is_on_floor():
 			match active_power:
-				tripple_jump:
+				triple_jump:
 					remaining_jumps = 3
 				double_jump:
 					remaining_jumps = 2
@@ -93,8 +93,8 @@ func set_active_power(power: String) -> void:
 func cycle_power() -> void:
 	match get_active_power():
 		double_jump:
-			set_active_power(tripple_jump)
-		tripple_jump:
+			set_active_power(triple_jump)
+		triple_jump:
 			set_active_power(slow_fall)
 		slow_fall:
 			set_active_power(low_gravity)
