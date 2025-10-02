@@ -192,14 +192,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ig48j"]
-size = Vector2(64, 97)
+size = Vector2(55, 86)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_ig48j")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(44.000004, 189)
 scale = Vector2(3, 3.428)
 sprite_frames = SubResource("SpriteFrames_8eflq")
 autoplay = "default"
@@ -208,5 +207,5 @@ frame_progress = 0.7349251
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(46, 193.5)
+position = Vector2(-2.5, 11)
 shape = SubResource("RectangleShape2D_ig48j")

@@ -205,7 +205,7 @@ tile_map_data = PackedByteArray("AAABAAwAAAAHAAgAAAACAAwAAAAHAAgAAAADAAwAAAAHAAg
 tile_set = SubResource("TileSet_tbgi4")
 
 [node name="CharacterBody2D" parent="SceneObjects" instance=ExtResource("3_jyhfs")]
-position = Vector2(61, 28)
+position = Vector2(118, 217)
 
 [node name="Camera2D" type="Camera2D" parent="SceneObjects/CharacterBody2D"]
 position = Vector2(44, 199)
@@ -221,16 +221,16 @@ position = Vector2(2507, 231)
 position = Vector2(2751, 282)
 
 [node name="Collectable4" parent="SceneObjects/CollectablesGroup" instance=ExtResource("4_jyhfs")]
-position = Vector2(747, 187)
+position = Vector2(571, 296)
 
 [node name="Collectable5" parent="SceneObjects/CollectablesGroup" instance=ExtResource("4_jyhfs")]
-position = Vector2(821, 189)
+position = Vector2(697, 289)
 
 [node name="Collectable6" parent="SceneObjects/CollectablesGroup" instance=ExtResource("4_jyhfs")]
-position = Vector2(923, 235)
+position = Vector2(832, 290)
 
 [node name="Collectable7" parent="SceneObjects/CollectablesGroup" instance=ExtResource("4_jyhfs")]
-position = Vector2(204, 232)
+position = Vector2(229, 349)
 
 [node name="Collectable8" parent="SceneObjects/CollectablesGroup" instance=ExtResource("4_jyhfs")]
 position = Vector2(1598, 274)
@@ -243,6 +243,9 @@ position = Vector2(2263, 280)
 
 [node name="Collectable" parent="SceneObjects/CollectablesGroup" instance=ExtResource("4_jyhfs")]
 position = Vector2(1518, 272)
+
+[node name="Collectable11" parent="SceneObjects/CollectablesGroup" instance=ExtResource("4_jyhfs")]
+position = Vector2(1267, 253)
 
 [node name="Trophy" parent="SceneObjects" instance=ExtResource("6_tefeu")]
 

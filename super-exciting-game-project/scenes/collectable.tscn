@@ -139,14 +139,12 @@ script = ExtResource("1_llfh3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(497, 66)
 scale = Vector2(1.90625, 1.78125)
 sprite_frames = SubResource("SpriteFrames_01e2c")
 autoplay = "default"
 frame_progress = 0.23439069
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(499, 66)
 shape = SubResource("CapsuleShape2D_jcngj")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
