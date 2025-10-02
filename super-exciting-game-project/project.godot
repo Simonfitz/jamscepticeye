@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SuperExcitingGameProject"
-run/main_scene="uid://c84n4o0s3gidf"
+run/main_scene="uid://b18s6antjqees"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
